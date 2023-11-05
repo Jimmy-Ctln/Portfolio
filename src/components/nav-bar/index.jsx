@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function NavBar() {
   return (
-    <nav className='border-2 border-red-500'>
+    <nav className=''>
         <ul className='flex justify-end gap-10'> 
             <li>Home</li>
             <li>Qui suis-je ?</li>
