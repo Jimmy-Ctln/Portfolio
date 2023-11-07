@@ -1,14 +1,15 @@
-import { MainTitle } from '@/components/main-title'
 import NavBar from '@/components/nav-bar'
+import { Home } from './sections/home'
 
-export default function Home() {
+
+export default function Portfolio() {
   return (
     <>
     <header>
       <NavBar/>
     </header>
-      <main>
-        <MainTitle/>
+      <main className='h-full w-full'>
+      <Home/>
       </main>
     </>
   )
