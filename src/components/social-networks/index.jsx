@@ -5,7 +5,7 @@ import linkedin from '../../../public/assets/social_network_icons/linkedin.png'
 import Link from 'next/link'
 
 
-export default function SocialNetworks() {
+export function SocialNetworks() {
   return (
     <div className='flex gap-5'>
       <Link href="https://github.com/Jimmy-Ctln" target='_blank'>

@@ -12,7 +12,7 @@ export const AboutMe = () => {
         <div className="absolute w-52 h-52 top-60rem left-8rem rotate-20">
           <Image src={frame8} alt="diamant frames" />
         </div>
-        <h1 className="text-5xl font-bold">QUI SUIS-JE ?</h1>
+        <h3 className="text-4xl font-bold">QUI SUIS-JE ?</h3>
       </div>
       <div className="flex justify-around my-20">
         <div className="flex flex-col gap-y-4 w-500">

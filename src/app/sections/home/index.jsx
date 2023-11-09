@@ -3,8 +3,8 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
-import profilePicture from "../../../../public/assets/profile_photo_750w.webp";
-import SocialNetworks from "@/components/social-networks";
+import main_picture from "../../../../public/assets/profile_photos/main_picture_750w.webp";
+import {SocialNetworks} from "@/components/social-networks";
 import frame2 from "../../../../public/assets/diamond_frames/frame2.png"
 import frame4 from "../../../../public/assets/diamond_frames/frame4.png"
 import { DownloadOutlined } from "@ant-design/icons";
@@ -34,8 +34,8 @@ export const Home = () => {
         <>
           <Image
             className="w-461 h-461 rounded-full object-cover z-10"
-            src={profilePicture}
-            alt="Photo de profil de Jimmy Catalano"
+            src={main_picture}
+            alt="Profile photo of Jimmy Catalano"
           />
         </>
         <>
