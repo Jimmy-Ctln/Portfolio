@@ -1,5 +1,6 @@
 import NavBar from '@/components/nav-bar'
 import { Home } from './sections/home'
+import { AboutMe } from './sections/aboutme'
 
 
 export default function Portfolio() {
@@ -10,6 +11,7 @@ export default function Portfolio() {
     </header>
       <main className='h-full w-full'>
       <Home/>
+      <AboutMe/>
       </main>
     </>
   )

@@ -10,11 +10,26 @@ module.exports = {
       colors: {
         'background': '#0F103F'
       },
+      spacing: {
+        '8rem': '8rem',
+        '60rem': '60rem',
+      },
       width: {
-        '461': "461px"
+        '368': '368px',
+        '461': '461px',
+        '500': '500px',
+        '590': '590px',
       },
       height: {
-        '461': "461px"
+        '302': '302px',
+        '420': '420px',
+        '461': '461px',
+      },
+      borderRadius: {
+        '45': '45px',
+      },
+      rotate: {
+        '20': '20deg'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
