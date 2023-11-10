@@ -2,6 +2,7 @@ import NavBar from '@/components/nav-bar'
 import { Home } from './sections/home'
 import { AboutMe } from './sections/aboutme'
 import { Skills } from './sections/skills'
+import { Experiences } from './sections/experiences'
 
 
 export default function Portfolio() {
@@ -14,6 +15,7 @@ export default function Portfolio() {
       <Home/>
       <AboutMe/>
       <Skills/>
+      <Experiences/>
       </main>
     </>
   )
