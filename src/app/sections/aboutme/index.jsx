@@ -7,7 +7,7 @@ import { SocialNetworks } from "../../../components/social-networks";
 
 export const AboutMe = () => {
   return (
-    <div className="AboutMe-Container">
+    <div id="about-me" className="AboutMe-Container">
       <div className="text-center">
         <div className="absolute w-52 h-52 top-60rem left-8rem rotate-20">
           <Image src={frame8} alt="diamant frames" />

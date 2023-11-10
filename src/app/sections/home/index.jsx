@@ -14,7 +14,7 @@ export const Home = () => {
   const [size, setSize] = useState("large");
 
   return (
-      <div className="flex items-center justify-center gap-20">
+      <div id="home" className="flex items-center justify-center gap-20">
         <div className="absolute top-10 left-5">
           <Image src={frame2} alt="diamant frames"/>
         </div>
