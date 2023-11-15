@@ -12,7 +12,7 @@ export const Experiences = () => {
         <Image src={frame2} alt="diamond frame"/>
       </div>
       <div className="flex justify-center">
-        <h3 className="text-4xl h-auto font-bold">Expériences</h3>
+        <h3 className="text-4xl h-auto font-bold">EXPÉRIENCES</h3>
       </div>
       <div className="flex flex-col items-center mt-24 gap-10">
         <div className="relative left-60">

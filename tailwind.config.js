@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'background': '#0F103F',
-        'rectangle': '#2F2F8A'
+        'primary': '#0F103F',
+        'secondary': '#2F2F8A'
+        
       },
       spacing: {
         '8rem': '8rem',
@@ -27,6 +28,7 @@ module.exports = {
         '500': '500px',
         '510': '510px',
         '590': '590px',
+        '735': '735px',
         '985': '985px',
         '1129': '1129px',
 
