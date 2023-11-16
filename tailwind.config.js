@@ -9,8 +9,10 @@ module.exports = {
     extend: {
       colors: {
         'primary': '#0F103F',
-        'secondary': '#2F2F8A'
-        
+        'secondary': '#2F2F8A',
+        'third': '#2954A3',
+        'fourth': '#C961DE'
+         
       },
       spacing: {
         '8rem': '8rem',
@@ -28,6 +30,7 @@ module.exports = {
         '500': '500px',
         '510': '510px',
         '590': '590px',
+        '700': '700px',
         '735': '735px',
         '985': '985px',
         '1129': '1129px',
@@ -40,6 +43,7 @@ module.exports = {
         '302': '302px',
         '420': '420px',
         '461': '461px',
+
         '985': '985px',
         '1025': '1025px'
       },

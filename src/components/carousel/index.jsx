@@ -41,47 +41,78 @@ export const Carousel = () => {
             onClick={handlePrev}
             alt="arrow left button"
           />
-          <div className="w-full h-full blur-sm">
+          <div className="w-96 h-420 blur-sm mr-[-60px] brightness-50">
             <Image
               key={prevProject.id}
               src={prevProject.src}
               className="rounded-3xl"
               width={1440}
-              height={1155}
+              height={1065}
               style={{
-                width:'100%',
-                height:'100%',
-                objectFit: 'cover'
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top",
               }}
               alt={`project ${prevProject.name}`}
             />
           </div>
-          <div className="w-full h-full">
+          <div className="w-700 h-461 z-10 relative">
+            <div className="before-element absolute rounded-bl-[20px] rounded-br-[20px] bottom-0 w-full h-20 bg-secondary opacity-100">
+              <div className="absolute bottom-0 flex justify-center items-center w-full h-full gap-14">
+                <div className="flex gap-20 items-center">
+                  <p className="font-bold text-base">{currentProject.name}</p>
+                  <p className="w-72 text-sm">{currentProject.description}</p>
+                </div>
+              </div>
+                {/* <div className="absolute right-[25px] bottom-[25px] flex items-center gap-5">
+                  <Link href={currentProject.websiteLink}>
+                    <Image
+                      src={link}
+                      width={30}
+                      height={30}
+                      className="cursor-pointer"
+                      alt="link to the online project"
+                    />
+                  </Link>
+                  <Link href={currentProject.githubLink}>
+                    <Image
+                      src={github}
+                      className="cursor-pointer"
+                      width={30}
+                      height={30}
+                      alt="project link on github"
+                    />
+                  </Link>
+                </div> */}
+            </div>
             <Image
               key={currentProject.id}
               src={currentProject.src}
               width={1440}
               height={1065}
               style={{
-                width:'100%',
-                height:'100%',
-                objectFit: 'cover'
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top",
               }}
               className="rounded-3xl"
               alt={`project ${currentProject.name}`}
             />
           </div>
-          <div className="w-full h-full blur-sm ">
+          <div className="w-96 h-420 blur-sm ml-[-60px] brightness-50">
             <Image
               key={nextProject.id}
               src={nextProject.src}
               className="rounded-3xl"
               width={1440}
-              height={1395}
+              height={1065}
               style={{
-                width:'100%',
-                height:'100%',
-                objectFit: 'cover'
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "top",
               }}
               alt={`project ${nextProject.name}`}
             />
@@ -93,28 +124,6 @@ export const Carousel = () => {
             alt="arrow right button"
           />
         </div>
-      </div>
-      <div className="flex justify-center mt-10 gap-10">
-        <p>{currentProject.name}</p>
-        <p>{currentProject.description}</p>
-        <Link href={currentProject.websiteLink}>
-          <Image
-            src={link}
-            width={40}
-            height={40}
-            className="cursor-pointer"
-            alt="link to the online project"
-          />
-        </Link>
-        <Link href={currentProject.githubLink}>
-          <Image
-            src={github}
-            className="cursor-pointer"
-            width={40}
-            height={40}
-            alt="project link on github"
-          />
-        </Link>
       </div>
     </div>
   );
