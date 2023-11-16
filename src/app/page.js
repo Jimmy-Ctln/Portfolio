@@ -11,7 +11,7 @@ import { Footer } from '@/components/footer'
 export default function Portfolio() {
   return (
     <>
-    <header>
+    <header className='fixed h-10 flex justify-center items-center p-10 rounded-lg z-50 right-0 mr-10 bg-gradient-to-r from-secondary to-primary'>
       <NavBar/>
     </header>
       <main>

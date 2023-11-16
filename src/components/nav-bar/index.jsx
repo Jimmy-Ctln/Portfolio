@@ -9,9 +9,9 @@ export default function NavBar() {
         <li><Link href='#about-me' className='cursor-pointer'>Qui suis-je ?</Link></li>
         <li><Link href='#skills' className='cursor-pointer'>Compétences</Link></li>
         <li><Link href='#experiences' className='cursor-pointer'>Expériences</Link></li>
-        <li><Link href='' className='cursor-pointer'>Réalisation</Link></li>
-        <li><Link href='' className='cursor-pointer'>Contact</Link></li>
-        </ul>  
+        <li><Link href='#my-work' className='cursor-pointer'>Réalisations</Link></li>
+        <li><Link href='#contact' className='cursor-pointer'>Contact</Link></li>
+        </ul>
     </nav>
   )
 }
