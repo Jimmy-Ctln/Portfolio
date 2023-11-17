@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      theme: {
+        borderRadius: {
+          '1120px': '1120px',
+        },
+      },
       colors: {
         'primary': '#0F103F',
         'secondary': '#2F2F8A',
@@ -43,6 +48,7 @@ module.exports = {
         '302': '302px',
         '420': '420px',
         '461': '461px',
+        '735': '735px',
 
         '985': '985px',
         '1025': '1025px'

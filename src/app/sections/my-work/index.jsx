@@ -3,13 +3,13 @@ import { Carousel } from '@/components/carousel'
 
 export const MyWork = () => {
   return (
-    <div id='my-work' className='mt-40'>
+    <section id='my-work' className='mt-20 pt-40 pb-20'>
         <div className='flex justify-center'>
-            <h3 className='text-4xl h-auto font-bold'>MES RÉALISATIONS</h3>
+            <h3 className='text-4xl h-auto font-bold mb-10'>MES RÉALISATIONS</h3>
         </div>
         <>
             <Carousel/>
         </>
-    </div>
+    </section>
   )
 }

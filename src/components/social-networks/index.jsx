@@ -9,11 +9,12 @@ export function SocialNetworks() {
   return (
     <div className='flex gap-5'>
       <Link href="https://github.com/Jimmy-Ctln" target='_blank'>
-        <Image className='w-14 h-14 cursor-pointer' src={github} alt='logo github'/>
+        <Image className='w-12 h-12 cursor-pointer' src={github} alt='logo github'/>
       </Link>
       <Link href="https://www.linkedin.com/in/jimmycatalano/" target='_blank'>
-        <Image className='w-14 h-14 cursor-pointer' src={linkedin} alt='logo linkedin'/>
+        <Image className='w-12 h-12 cursor-pointer' src={linkedin} alt='logo linkedin'/>
       </Link>
     </div>
   )
 }
+ 

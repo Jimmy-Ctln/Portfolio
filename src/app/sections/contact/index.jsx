@@ -2,7 +2,7 @@ import React from "react";
 
 export const Contact = () => {
   return (
-    <div id="contact">
+    <section id="contact" className="mt-20 pt-20">
       <div className="flex justify-center mt-24">
         <h3 className="text-4xl h-auto font-bold">CONTACT</h3>
       </div>
@@ -42,6 +42,6 @@ export const Contact = () => {
           </div>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
