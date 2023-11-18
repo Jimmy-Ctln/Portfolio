@@ -48,10 +48,13 @@ module.exports = {
         '302': '302px',
         '420': '420px',
         '461': '461px',
+        '510': '510px',
         '735': '735px',
 
         '985': '985px',
-        '1025': '1025px'
+        '1025': '1025px',
+        '2163': '2163px'
+        
       },
       borderRadius: {
         '45': '45px',
@@ -59,7 +62,9 @@ module.exports = {
       rotate: {
         '20': '20deg'
       },
+      
       backgroundImage: {
+        'gradient-radial-custom': 'radial-gradient(115.58% 111.51% at 55.02% 29.51%, #C961DE 0%, rgba(188, 101, 210, 0.50) 100%)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
