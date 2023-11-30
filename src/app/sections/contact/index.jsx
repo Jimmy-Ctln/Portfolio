@@ -1,47 +1,151 @@
+"use client";
+
 import React from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
+  const myServiceID = process.env.NEXT_PUBLIC_MY_SERVICE_ID;
+  const myTemplateID = process.env.NEXT_PUBLIC_MY_TEMPLATE_ID;
+  const myPublicKey = process.env.NEXT_PUBLIC_MY_PUBLIC_KEY;
+
+  const form = useRef();
+  const [errorForm, setErrorForm] = useState(false);
+
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_firstName: "",
+    user_email: "",
+    message: "",
+  });
+
+  const error = () => {
+    setErrorForm(true);
+
+    setTimeout(() => {
+      setErrorForm(false);
+    }, 5000);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (
+      formData.user_name.trim() === "" ||
+      formData.user_firstName.trim() === "" ||
+      formData.user_email.trim() === "" ||
+      formData.message.trim() === ""
+    ) {
+      error();
+      return;
+    } else {
+      emailjs
+        .sendForm(myServiceID, myTemplateID, form.current, myPublicKey)
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+            console.log(error)
+          }
+        );
+      setFormData({
+        user_name: "",
+        user_firstName: "",
+        user_email: "",
+        message: "",
+      });
+      setErrorForm(false);
+    }
+  };
+
   return (
-    <section id="contact" className="mt-20 pt-20">
-      <div className="flex justify-center mt-24">
-        <h3 className="text-4xl h-auto font-bold">CONTACT</h3>
+    <section
+      id="contact"
+      className="pb-96 pt-20 max-lg:mt-0 border-2 border-white-500 max-lg:pt-8"
+    >
+      <div className="flex justify-center mt-24 max-lg:mt-0">
+        <h3 className="text-4xl h-auto font-bold max-lg:text-3xl">CONTACT</h3>
       </div>
-      <form className="w-full">
-        <div className="flex flex-col items-center mt-14 gap-5">
-          <div className="flex gap-3">
-            <div className="w-1/2">
+      <div className="flex flex-col mt-14 max-lg:mt-14">
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5 max-w-6xl mx-auto px-5">
+          <div className="flex gap-2 max-sm:text-xs">
+            <div className="flex w-full justify-end">
               <input
-              type="text"
-              id="name"
-              className=" h-16 rounded-xl pl-4 bg-secondary"
-              placeholder="Nom"/>
+                type="text"
+                name="user_name"
+                value={formData.user_name}
+                onChange={handleInputChange}
+                className="w-full rounded-xl py-3 px-4 bg-secondary"
+                placeholder="Nom"
+              />
             </div>
-            <div className="w-1/2">
+            <div className="flex w-full justify-start max-sm:text-xs">
               <input
-              type="text"
-              id="firstName"
-              className="w-full h-16 rounded-xl pl-4 bg-secondary"
-              placeholder="Prénom"/>
+                type="text"
+                name="user_firstName"
+                value={formData.user_firstName}
+                onChange={handleInputChange}
+                className="w-full rounded-xl py-3 px-4 bg-secondary"
+                placeholder="Prénom"
+              />
             </div>
           </div>
-          <div className="w-1/4">
+          <div className="flex justify-center max-sm:text-xs">
             <input
-            type="email"
-            id="email"
-            className="w-full h-16 rounded-xl pl-4 bg-secondary"
-            placeholder="Adresse e-mail"/>
+              type="email"
+              name="user_email"
+              value={formData.user_email}
+              onChange={handleInputChange}
+              className="w-full rounded-xl py-3 px-3 bg-secondary"
+              placeholder="Adresse e-mail"
+            />
           </div>
-          <div className="w-1/4">
+          <div className="flex justify-center max-sm:text-xs">
             <textarea
-            id="message"
-            className="w-full h-36 rounded-xl pt-4 pl-4 bg-secondary"
-            placeholder="Votre message"/>
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              className="w-full h-52 rounded-xl px-3 py-5 bg-secondary"
+              placeholder="Votre message"
+            />
           </div>
-          <div className="flex justify-center w-1/4">
-            <button className="w-full p-4 rounded-xl bg-secondary" type="submit">Envoyer</button>
-          </div>
-        </div>
-      </form>
+          {errorForm ? (
+            <div>
+              <div className="flex justify-center max-sm:text-xs">
+                <button
+                  className="w-full p-4 rounded-xl bg-secondary"
+                  type="submit"
+                >
+                  Envoyer
+                </button>
+              </div>
+              <div className="flex justify-center text-center mt-5 mx-10">
+                <p className="font-bold text-red-500">
+                  Merci de remplir tous les champs du formulaire !
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="flex justify-center max-sm:text-xs">
+              <button
+                className="w-full p-4 rounded-xl bg-secondary"
+                type="submit"
+              >
+                Envoyer
+              </button>
+            </div>
+          )}
+        </form>
+      </div>
     </section>
   );
 };
