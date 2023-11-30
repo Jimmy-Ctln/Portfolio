@@ -3,12 +3,12 @@ import { Training } from "@/components/training";
 
 export const Experiences = () => {
   return (
-    <section id="experiences" className="relative pt-32 pb-20">
+    <section id="experiences" className="relative pt-32 pb-20 border-2 border-yellow-500 max-lg:pt-8">
       <div className="flex justify-center">
-        <h3 className="text-4xl h-auto font-bold">EXPÉRIENCES</h3>
+        <h3 className="text-4xl h-auto font-bold max-lg:text-3xl">EXPÉRIENCES</h3>
       </div>
-      <div className="flex flex-col items-center mt-24 gap-3">
-        <div className="relative left-48">
+      <div className="flex flex-col items-center mt-24 gap-3 max-lg:mt-14 max-lg:gap-10">
+        <div className="relative left-48 max-lg:left-0">
           <Training
             date={"2023"}
             training={"Openclassrooms"}
@@ -21,7 +21,7 @@ export const Experiences = () => {
             }
           />
         </div>
-        <div className="relative right-48">
+        <div className="relative right-48 max-lg:left-0">
           <Training
             date={"2021 - 2023"}
             training={"Créateur de contenus"}
@@ -34,7 +34,7 @@ export const Experiences = () => {
             }
           />
         </div>
-        <div className="relative left-48">
+        <div className="relative left-48 max-lg:left-0">
           <Training
             date={"2021"}
             training={"Gaming Campus"}
@@ -47,14 +47,14 @@ export const Experiences = () => {
             }
           />
         </div>
-        <div className="relative right-48">
+        <div className="relative right-48 max-lg:left-0">
           <Training
             date={"2017 - 2020"}
             training={"Airbus"}
             description={'Mécanicien avion sur A350'}
           />
         </div>
-        <div className="relative left-48">
+        <div className="relative left-48 max-lg:left-0">
           <Training
             date={"2012 - 2015"}
             training={
