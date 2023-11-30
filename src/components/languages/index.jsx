@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export const Languages = ({ src, name }) => {
   return (
-        <div className="flex flex-col items-center">
-          <Image src={src} width="50" height="50" alt={name} />
-          <div>
-            <p>{name}</p>
-          </div>
-      </div>
+      <div className="flex flex-col items-center justify-center w-full">
+        <Image src={src} width="50" height="50" alt={name} />
+        <div>
+          <p className="w-full text-sm max-sm:text-xs">{name}</p>
+        </div>
+    </div>
   );
 };
