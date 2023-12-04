@@ -4,9 +4,9 @@ import React from "react";
 import Image from "next/image";
 import frame2 from "../../../../public/assets/diamond_frames/frame2.png";
 import frame4 from "../../../../public/assets/diamond_frames/frame4.png";
-import { motion } from "framer-motion";
 import main_picture from "../../../../public/assets/profile_photos/main_picture_750w.webp";
 import { SocialNetworks } from "@/components/social-networks";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const Home = () => {
@@ -18,7 +18,11 @@ export const Home = () => {
             Jimmy<br></br>Catalano
           </h1>
           <h2 className="text-5xl max-lg:text-4xl max-sm:text-3xl">Développeur web</h2>
-          <button className="font-bold max-lg:text-lg flex gap-1 px-2.5 py-2.5 rounded-[10px] cursor-pointer bg-gradient-to-r from-fourth to-blue-500 opacity-100 max-lg:w-full max-lg:justify-center">
+          <motion.button
+          className="font-bold max-lg:text-lg flex gap-1 px-3.5 py-2.5 rounded-[10px] cursor-pointer bg-gradient-to-r from-fourth to-blue-500 opacity-100 max-lg:w-full max-lg:justify-center"
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.8}}
+          >  
             <Link
               href="/assets/download/cv-jimmy-catalano.pdf"
               download="CV-Jimmy-Catalano-2023.pdf"
@@ -26,16 +30,25 @@ export const Home = () => {
             >
               TÉLÉCHARGER MON CV
             </Link>
-          </button>
+          </motion.button>
           <SocialNetworks />
         </div>
-        <>
+        <motion.div
+        initial={{y:0}}
+        animate={{y:10}}
+        transition={{
+          repeat: Infinity,
+          duration: 2,
+          repeatType: "reverse",
+          ease: "easeInOut"
+        }}
+        >
           <Image
             className="w-461 h-461 rounded-full object-cover z-10 max-lg:w-80 max-lg:h-80 max-sm:w-60 max-sm:h-60"
             src={main_picture}
             alt="Profile photo of Jimmy Catalano"
           />
-        </>
+        </motion.div>
       </div>
       <div className="w-full h-full">
       <motion.div
