@@ -2,17 +2,17 @@
 
 import React from "react";
 import Image from "next/image";
-import frame2 from "../../../../public/assets/diamond_frames/frame2.png";
-import frame4 from "../../../../public/assets/diamond_frames/frame4.png";
-import main_picture from "../../../../public/assets/profile_photos/main_picture_750w.webp";
+import frame2 from "public/assets/diamond_frames/frame2.png";
+import frame4 from "public/assets/diamond_frames/frame4.png";
+import main_picture from "public/assets/profile_photos/main_picture_750w.webp";
 import { SocialNetworks } from "@/components/social-networks";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export const Home = () => {
   return (
-    <section id="home" className="w-full border-4 border-green-500 relative">
-      <div className="flex px-20 items-center justify-center ml-80 gap-20 my-80 max-lg:mt-14 max-lg:mb-0 max-lg:flex-col max-xl:ml-0 max-xl:gap-5 max-sm:px-5">
+    <section id="home" className="w-full h-full pb-10 relative">
+      <div className="flex px-20 items-center justify-center ml-52 gap-20 my-80 max-lg:mt-16 max-lg:mb-0 max-lg:flex-col max-xl:ml-0 max-xl:gap-10 max-sm:px-5">
         <div className="flex flex-col gap-6 items-baseline max-lg:mt-0 max-lg:items-center max-lg:text-center">
           <h1 className="font-bold text-7xl max-lg:text-6xl max-sm:text-5xl">
             Jimmy<br></br>Catalano
@@ -34,8 +34,8 @@ export const Home = () => {
           <SocialNetworks />
         </div>
         <motion.div
-        initial={{y:0}}
-        animate={{y:10}}
+        initial={{y:0, boxShadow: '0px 0px 30px #2954A3', borderRadius: '90%'}}
+        animate={{y:10, boxShadow: '0px 0px 50px #2954A3', borderRadius: '100%'}}
         transition={{
           repeat: Infinity,
           duration: 2,
@@ -44,15 +44,15 @@ export const Home = () => {
         }}
         >
           <Image
-            className="w-461 h-461 rounded-full object-cover z-10 max-lg:w-80 max-lg:h-80 max-sm:w-60 max-sm:h-60"
+            className="w-461 h-461 shadow-2xl rounded-full object-cover z-10 max-lg:w-80 max-lg:h-80 max-sm:w-72 max-sm:h-72"
             src={main_picture}
             alt="Profile photo of Jimmy Catalano"
           />
         </motion.div>
       </div>
-      <div className="w-full h-full">
+      <div>
       <motion.div
-      className="absolute top-[130px] left-[0px] z-[-50] max-xl:w-72 max-lg:w-64 max-lg:top-[0px] max-sm:w-36"
+      className="absolute top-[-200px] left-[150px] z-[-50] max-xl:w-72 max-lg:w-64 max-lg:top-0 max-xl:left-0 max-sm:w-24"
         animate={{ x: 8, y: 8 }}
         transition={{
           repeat: Infinity,
@@ -69,9 +69,9 @@ export const Home = () => {
         />
       </motion.div>
       </div>
-      <div className="w-full h-full">
+      <div>
         <motion.div
-        className=" absolute bottom-[45px] right-[60px] z-[-50] max-xl:w-72 max-lg:w-52 max-lg:right-[40px] max-sm:bottom-[25px] max-sm:w-28" 
+        className=" absolute bottom-[250px] right-[60px] z-[-50] max-xl:w-96 max-lg:w-64 max-lg:bottom-[50px] max-lg:right-[40px] max-sm:bottom-[80px]" 
         animate={{scale: 0.9, scale: 1.1}}
         transition={{
           repeat: Infinity,

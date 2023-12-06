@@ -68,11 +68,9 @@ export const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="pb-96 pt-20 max-lg:mt-0 border-2 border-white-500 max-lg:pt-8"
+    <section id="contact" className="pb-96 mt-20 pt-60 bg-five max-lg:mt-0 max-lg:pt-8 bg-secondary"
     >
-      <div className="flex justify-center mt-24 max-lg:mt-0">
+      <div className="flex justify-center max-lg:mt-0">
         <h3 className="text-4xl h-auto font-bold max-lg:text-3xl">CONTACT</h3>
       </div>
       <div className="flex flex-col mt-14 max-lg:mt-14">
@@ -84,7 +82,7 @@ export const Contact = () => {
                 name="user_name"
                 value={formData.user_name}
                 onChange={handleInputChange}
-                className="w-full rounded-xl py-3 px-4 bg-secondary"
+                className="w-full rounded-xl py-3 px-4 bg-dark-custom bg-opacity-80"
                 placeholder="Nom"
               />
             </div>
@@ -94,7 +92,7 @@ export const Contact = () => {
                 name="user_firstName"
                 value={formData.user_firstName}
                 onChange={handleInputChange}
-                className="w-full rounded-xl py-3 px-4 bg-secondary"
+                className="w-full rounded-xl py-3 px-4 bg-dark-custom bg-opacity-80"
                 placeholder="Prénom"
               />
             </div>
@@ -105,7 +103,7 @@ export const Contact = () => {
               name="user_email"
               value={formData.user_email}
               onChange={handleInputChange}
-              className="w-full rounded-xl py-3 px-3 bg-secondary"
+              className="w-full rounded-xl py-3 px-3 bg-dark-custom bg-opacity-80"
               placeholder="Adresse e-mail"
             />
           </div>
@@ -114,7 +112,7 @@ export const Contact = () => {
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              className="w-full h-52 rounded-xl px-3 py-5 bg-secondary"
+              className="w-full h-52 rounded-xl px-3 py-5 bg-dark-custom bg-opacity-80"
               placeholder="Votre message"
             />
           </div>
@@ -122,7 +120,7 @@ export const Contact = () => {
             <div>
               <div className="flex justify-center max-sm:text-xs">
                 <button
-                  className="w-full p-4 rounded-xl bg-secondary"
+                  className="w-full p-4 rounded-xl bg-dark-custom bg-opacity-80"
                   type="submit"
                 >
                   Envoyer
@@ -137,7 +135,7 @@ export const Contact = () => {
           ) : (
             <div className="flex justify-center max-sm:text-xs">
               <button
-                className="w-full p-4 rounded-xl bg-secondary"
+                className="w-full p-4 rounded-xl bg-dark-custom bg-opacity-80"
                 type="submit"
               >
                 Envoyer
