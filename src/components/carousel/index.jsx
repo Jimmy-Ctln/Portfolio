@@ -3,8 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { useState } from "react";
-import arrowLeft from "../../../public/assets/icons/arrow-left.png";
-import arrowRight from "../../../public/assets/icons/arrow-right.png";
+import {ArrowLeft} from "@/components/arrows-carousel/arrow-left.jsx";
+import {ArrowRight} from "@/components/arrows-carousel/arrow-right.jsx";
 import data from "../../data/data.json";
 
 export const Carousel = () => {
@@ -30,14 +30,11 @@ export const Carousel = () => {
 
   return (
       <div className="flex justify-center mt-10">
-        <div className="flex items-center gap-5 justify-center w-11/12 px-1">
-          <Image
-            src={arrowLeft}
-            className="w-20 h-auto cursor-pointer max-[945px]:w-11 max-sm:absolute max-sm:z-50 left-0"
-            onClick={handlePrev}
-            alt="arrow left button"
-          />
-          <div className="w-96 h-420 blur-sm mr-[-60px] brightness-50 max-xl:w-[200px] max-xl:h-[200px] max-[945px]:hidden">
+        <div className="flex relative items-center gap-3 justify-center max-w-7xl px-1">
+          <div className="flex max-[945px]:w-[70px] max-[945px]:h-[60%] max-[945px]:bg-gradient-to-l from-third to-secondary items-center justify-center rounded-xl z-40">
+            <ArrowLeft handlePrev={handlePrev}/>
+          </div>
+          <div className="w-96 h-420 blur-sm mr-[-60px] shadow-xl brightness-50 max-xl:w-[150px] max-xl:h-[300px] max-[945px]:hidden">
             <Image
               key={prevProject.id}
               src={prevProject.src}
@@ -53,12 +50,12 @@ export const Carousel = () => {
               alt={`project ${prevProject.name}`}
             />
           </div>
-          <div className="w-700 h-461 z-10 relative max-xl:w-[600px] max-xl:h-[400px] max-sm:w-full max-sm:h-[300px]">
-            <div className="before-element absolute rounded-bl-[20px] rounded-br-[20px] bottom-0 w-full h-20 bg-secondary opacity-100 max-lg:h-24">
+          <div className="w-700 h-461 z-10 relative max-xl:w-[500px] max-xl:h-[500px] max-sm:w-full max-md:h-[300px] shadow-xl">
+            <div className="before-element absolute rounded-bl-[20px] rounded-br-[20px] bottom-0 w-full h-20 bg-gradient-to-t from-third to-secondary max-lg:h-24">
               <div className="absolute bottom-0 flex justify-center items-center w-full h-full gap-14">
-                <div className="flex gap-20 items-center max-xl:gap-[2%] max-lg:justify-around">
-                  <p className="font-bold text-base max-lg:w-1/4 max-lg:text-sm">{currentProject.name}</p>
-                  <p className="w-72 text-sm max-lg:w-1/2 max-lg:text-xs">{currentProject.description}</p>
+                <div className="flex gap-20 justify-center items-center max-xl:gap-10 max-sm:gap-5">
+                  <p className="font-bold text-base text-center max-lg:w-1/4 max-lg:text-lg max-sm:text-sm">{currentProject.name}</p>
+                  <p className="w-72 text-sm max-lg:w-1/2 max-lg:text-sm max-sm:text-sm">{currentProject.description}</p>
                 </div>
               </div>
             </div>
@@ -77,7 +74,7 @@ export const Carousel = () => {
               alt={`project ${currentProject.name}`}
             />
           </div>
-          <div className="w-96 h-420 blur-sm ml-[-60px] brightness-50 max-xl:w-[200px] max-xl:h-[200px] max-[945px]:hidden">
+          <div className="w-96 h-420 blur-sm shadow-xl ml-[-60px] brightness-50 max-xl:w-[150px] max-xl:h-[300px] max-[945px]:hidden">
             <Image
               key={nextProject.id}
               src={nextProject.src}
@@ -93,12 +90,9 @@ export const Carousel = () => {
               alt={`project ${nextProject.name}`}
             />
           </div>
-          <Image
-            src={arrowRight}
-            className="w-20 h-auto cursor-pointer max-[945px]:w-11 max-sm:absolute max-sm:z-50 right-0"
-            onClick={handleNext}
-            alt="arrow right button"
-          />
+          <div className="flex max-[945px]:w-[70px] max-[945px]:h-[60%] max-[945px]:bg-gradient-to-r from-third to-secondary items-center justify-center rounded-xl z-40">
+              <ArrowRight handleNext={handleNext}/>
+          </div>
         </div>
       </div>
   );
