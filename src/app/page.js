@@ -5,6 +5,7 @@ import { Skills } from './sections/skills'
 import { Experiences } from './sections/experiences'
 import { MyWork } from './sections/my-work'
 import { Contact } from './sections/contact'
+import { Footer } from '@/components/footer'
 
 
 export default function Portfolio() {
@@ -13,14 +14,17 @@ export default function Portfolio() {
       <header>
         <Header/>
       </header>
-        <main>
+      <main>
         <Home/>
         <AboutMe/>
         <Skills/>
         <Experiences/>
         <MyWork/>
         <Contact/>
-        </main>
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
     </>
  
   )
