@@ -2,12 +2,15 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
-import {ArrowLeft} from "@/components/arrows-carousel/arrow-left.jsx";
-import {ArrowRight} from "@/components/arrows-carousel/arrow-right.jsx";
+import { ArrowLeft } from "@/components/arrows-carousel/arrow-left.jsx";
+import { ArrowRight } from "@/components/arrows-carousel/arrow-right.jsx";
+import github from 'public/assets/social_network_icons/github.svg'
 import data from "../../data/data.json";
 
 export const Carousel = () => {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const projects = data.carrousel.projects;
   const currentProject = projects[currentIndex];
@@ -29,71 +32,78 @@ export const Carousel = () => {
   };
 
   return (
-      <div className="flex justify-center mt-10">
-        <div className="flex relative items-center gap-3 justify-center max-w-7xl px-1">
-          <div className="flex max-[945px]:w-[70px] max-[945px]:h-[60%] max-[945px]:bg-gradient-to-l from-third to-secondary items-center justify-center rounded-xl z-40">
-            <ArrowLeft handlePrev={handlePrev}/>
-          </div>
-          <div className="w-96 h-420 blur-sm mr-[-60px] shadow-xl brightness-50 max-xl:w-[150px] max-xl:h-[300px] max-[945px]:hidden">
-            <Image
-              key={prevProject.id}
-              src={prevProject.src}
-              className="rounded-3xl"
-              width={1440}
-              height={1065}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "top",
-              }}
-              alt={`project ${prevProject.name}`}
-            />
-          </div>
-          <div className="w-700 h-461 z-10 relative max-xl:w-[500px] max-xl:h-[500px] max-sm:w-full max-md:h-[300px] shadow-xl">
-            <div className="before-element absolute rounded-bl-[20px] rounded-br-[20px] bottom-0 w-full h-20 bg-gradient-to-t from-third to-secondary max-lg:h-24">
-              <div className="absolute bottom-0 flex justify-center items-center w-full h-full gap-14">
-                <div className="flex gap-20 justify-center items-center max-xl:gap-10 max-sm:gap-5">
-                  <p className="font-bold text-base text-center max-lg:w-1/4 max-lg:text-lg max-sm:text-sm">{currentProject.name}</p>
-                  <p className="w-72 text-sm max-lg:w-1/2 max-lg:text-sm max-sm:text-sm">{currentProject.description}</p>
-                </div>
+    <div className="flex justify-center mt-10 p-5">
+      <div className="flex relative items-center gap-3 justify-center px-1">
+        <div className="z-40">
+          <ArrowLeft handlePrev={handlePrev} />
+        </div>
+        <div className="w-[280px] h-[420px] blur-sm mr-[-60px] shadow-xl brightness-50 max-xl:w-[180px] max-lg:w-[150px] max-[965px]:hidden">
+          <Image
+            key={prevProject.id}
+            src={prevProject.src}
+            className="rounded-3xl"
+            width={1440}
+            height={1065}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "top",
+            }}
+            alt={`project ${prevProject.name}`}
+          />
+        </div>
+        <div className="w-[700px] h-[600px] z-10 relative shadow-xl max-2xl:w-[600px] max-2xl:h-[500px]">
+          <div className="before-element absolute rounded-bl-[20px] rounded-br-[20px] bottom-0 w-full h-36 bg-gradient-to-t from-third to-secondary">
+            <div className="absolute left-0 bottom-0 flex w-full h-full">
+              <div className="flex gap-10 p-10 w-full items-center">
+                <p className="font-bold flex-1 text-lg text-center">
+                  {currentProject.name}
+                </p>
+                <p className="text-base w-3/5">
+                  {currentProject.description}
+                </p>
+                <Link href={currentProject.githubLink} target="_blank">
+                  <Image className="w-7 h-7 cursor-pointer flex-1" src={github} alt="logo github"/>
+                </Link>
               </div>
             </div>
-            <Image
-              key={currentProject.id}
-              src={currentProject.src}
-              width={1440}
-              height={1065}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "top",
-              }}
-              className="rounded-3xl"
-              alt={`project ${currentProject.name}`}
-            />
           </div>
-          <div className="w-96 h-420 blur-sm shadow-xl ml-[-60px] brightness-50 max-xl:w-[150px] max-xl:h-[300px] max-[945px]:hidden">
-            <Image
-              key={nextProject.id}
-              src={nextProject.src}
-              className="rounded-3xl"
-              width={1440}
-              height={1065}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "top",
-              }}
-              alt={`project ${nextProject.name}`}
-            />
-          </div>
-          <div className="flex max-[945px]:w-[70px] max-[945px]:h-[60%] max-[945px]:bg-gradient-to-r from-third to-secondary items-center justify-center rounded-xl z-40">
-              <ArrowRight handleNext={handleNext}/>
-          </div>
+          <Image
+            key={currentProject.id}
+            src={currentProject.src}
+            width={1440}
+            height={1065}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "top",
+            }}
+            className="rounded-3xl"
+            alt={`project ${currentProject.name}`}
+          />
+        </div>
+        <div className="w-[280px] h-[420px] blur-sm ml-[-60px] shadow-xl brightness-50 max-xl:w-[180px] max-lg:w-[150px] max-[965px]:hidden">
+          <Image
+            key={nextProject.id}
+            src={nextProject.src}
+            className="rounded-3xl"
+            width={1440}
+            height={1065}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "top",
+            }}
+            alt={`project ${nextProject.name}`}
+          />
+        </div>
+        <div className="z-40">
+          <ArrowRight handleNext={handleNext} />
         </div>
       </div>
+    </div>
   );
 };
