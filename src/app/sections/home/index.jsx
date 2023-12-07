@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import frame2 from "public/assets/diamond_frames/frame2.png";
-import frame4 from "public/assets/diamond_frames/frame4.png";
-import main_picture from "public/assets/profile_photos/main_picture_750w.webp";
+import frame2 from "/public/assets/diamond_frames/frame2.png";
+import frame4 from "/public/assets/diamond_frames/frame4.png";
+import main_picture from "/public/assets/profile_photos/main_picture_750w.webp";
 import { SocialNetworks } from "@/components/social-networks";
 import { motion } from "framer-motion";
 import Link from "next/link";

@@ -51,25 +51,22 @@
         "id": 1,
         "name": "KASA",
         "src": "/assets/images/kasa.png",
-        "websiteLink": "https://jimmy-ctln.github.io/",
         "githubLink": "https://github.com/Jimmy-Ctln/Location-Immobiliere",
-        "description": "Intégration d'une maquette responsive avec React et sass"
+        "description": "Création d'une application web de location immobilière avec React & Sass"
       },
       {
         "id": 2,
         "name": "Ohmyfood",
         "src": "/assets/images/ohmyfood.png",
-        "websiteLink": "",
         "githubLink": "https://github.com/Jimmy-Ctln/Projet-4-ohmyfood.github.io",
-        "description": "Ohmyfood est une entreprise de commande de repas en ligne."
+        "description": "Création d'un site mobile avec des animations CSS"
       },
       {
         "id": 3,
         "name": "Argent-Bank",
         "src": "/assets/images/argent-bank.png",
-        "websiteLink": "",
         "githubLink": "https://github.com/Jimmy-Ctln/ArgentBank-website",
-        "description": "Argent Bank est une nouvelle banque en ligne qui souhaite percer dans le secteur bancaire."
+        "description": "Création d'un site bancaire avec React & Redux"
       }
     ]
   }

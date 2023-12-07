@@ -3,7 +3,7 @@ import React from "react";
 export const ArrowLeft = ({handlePrev}) => {
   return (
     <svg
-      className="max-lg:w-[30px] cursor-pointer"
+      className="cursor-pointer"
       xmlns="http://www.w3.org/2000/svg"
       width="50"
       height="50"
