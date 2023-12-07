@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export const Home = () => {
   return (
-    <section id="home" className="w-full h-full pb-10 relative">
+    <section id="home" className="w-full h-full pb-10  relative">
       <div className="flex px-20 items-center justify-center ml-52 gap-20 my-80 max-lg:mt-16 max-lg:mb-0 max-lg:flex-col max-xl:ml-0 max-xl:gap-10 max-sm:px-5">
         <div className="flex flex-col gap-6 items-baseline max-lg:mt-0 max-lg:items-center max-lg:text-center">
           <h1 className="font-bold text-7xl max-lg:text-6xl max-sm:text-5xl">
@@ -24,6 +24,7 @@ export const Home = () => {
           whileTap={{scale: 0.8}}
           >  
             <Link
+              className="w-full"
               href="/assets/download/cv-jimmy-catalano.pdf"
               download="CV-Jimmy-Catalano-2023.pdf"
               target="_blank"

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export function SocialNetworks() {
   return (
-    <div className='flex gap-5'>
+    <div className='flex gap-3'>
       <motion.a
       href="https://github.com/Jimmy-Ctln"
       target='_blank'
