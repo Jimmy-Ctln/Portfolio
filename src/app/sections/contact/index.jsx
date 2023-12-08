@@ -3,7 +3,7 @@
 import React from "react";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export const Contact = () => {
   const myServiceID = process.env.NEXT_PUBLIC_MY_SERVICE_ID;
@@ -11,9 +11,8 @@ export const Contact = () => {
   const myPublicKey = process.env.NEXT_PUBLIC_MY_PUBLIC_KEY;
 
   const form = useRef();
-  const [message, setMessage] = useState('');
-  const [isSuccess, setIsSuccess] = useState()
-
+  const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState();
 
   const [formData, setFormData] = useState({
     user_name: "",
@@ -26,8 +25,8 @@ export const Contact = () => {
     setMessage(message);
 
     setTimeout(() => {
-      setMessage('');
-      setIsSuccess(null)
+      setMessage("");
+      setIsSuccess(null);
     }, 3000);
   };
 
@@ -47,8 +46,8 @@ export const Contact = () => {
       formData.user_email.trim() === "" ||
       formData.message.trim() === ""
     ) {
-      displayMessage('Merci de remplir tous les champs du formulaire')
-      setIsSuccess(false)
+      displayMessage("Merci de remplir tous les champs du formulaire");
+      setIsSuccess(false);
       return;
     } else {
       emailjs
@@ -56,13 +55,15 @@ export const Contact = () => {
         .then(
           (result) => {
             console.log(result.text);
-            displayMessage('Le formulaire a été envoyé avec succès !')
-            setIsSuccess(true)
+            displayMessage("Le formulaire a été envoyé avec succès !");
+            setIsSuccess(true);
           },
           (error) => {
             console.log(error.text);
-            displayMessage('Une erreur est survenue lors de l\envoie du formulaire !')
-            setIsSuccess(false)
+            displayMessage(
+              "Une erreur est survenue lors de lenvoie du formulaire !"
+            );
+            setIsSuccess(false);
           }
         );
       setFormData({
@@ -75,15 +76,30 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="pb-40 relative pt-32 bg-five max-lg:mt-0 max-lg:pt-8 bg-secondary">
+    <section
+      id="contact"
+      className="pb-40 relative pt-28 bg-five max-lg:mt-0 max-lg:pt-24 bg-secondary"
+    >
       <div className="flex justify-center max-lg:mt-0">
         <h3 className="text-4xl h-auto font-bold max-lg:text-3xl">CONTACT</h3>
       </div>
       <div className="flex flex-col max-w-[900px] mx-auto mt-14 max-lg:w-full">
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-5 px-5">
-      <div className={`${isSuccess === false ? 'bg-red-700' : isSuccess === true ? 'bg-green-700' : ''} w-[90%] mx-auto rounded-xl text-center p-3`}>
-            {message && <p className="text-sm">{message}</p>}
-      </div>
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="flex flex-col gap-5 px-2"
+        >
+          <div
+            className={`${
+              isSuccess === false
+                ? "bg-red-700"
+                : isSuccess === true
+                ? "bg-green-700"
+                : ""
+            } w-[90%] mx-auto rounded-xl text-center p-3 `}
+          >
+            {message && <p className="text-base max-sm:text-xs">{message}</p>}
+          </div>
           <div className="flex gap-2 max-sm:text-xs">
             <div className="flex w-full justify-end">
               <input
@@ -125,25 +141,26 @@ export const Contact = () => {
               placeholder="Votre message"
             />
           </div>
-            <div>
-              <div className="flex justify-center max-sm:text-xs">
-                <motion.button
-                  className="w-full p-4 rounded-xl bg-dark-custom bg-opacity-80"
-                  type="submit"
-                  key={isSuccess}
-                  animate={{
-                  x: isSuccess === false ? 10 : 0}}
-                  transition={{
-                    repeat: 3,
-                    duration: 0.05,
-                    repeatType: "reverse",
-                    ease: "easeInOut"
-                  }}
-                >
-                  Envoyer
-                </motion.button>
-              </div>
+          <div>
+            <div className="flex justify-center max-sm:text-xs">
+              <motion.button
+                className="w-full p-4 rounded-xl bg-dark-custom bg-opacity-80"
+                type="submit"
+                key={isSuccess}
+                animate={{
+                  x: isSuccess === false ? 10 : 0,
+                }}
+                transition={{
+                  repeat: 3,
+                  duration: 0.05,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                }}
+              >
+                Envoyer
+              </motion.button>
             </div>
+          </div>
         </form>
       </div>
     </section>
