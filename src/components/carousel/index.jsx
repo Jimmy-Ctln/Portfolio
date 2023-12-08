@@ -6,11 +6,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { ArrowLeft } from "@/components/arrows-carousel/arrow-left.jsx";
 import { ArrowRight } from "@/components/arrows-carousel/arrow-right.jsx";
-import github from 'public/assets/social_network_icons/github.svg'
+import github from "public/assets/social_network_icons/github.svg";
 import data from "../../data/data.json";
 
 export const Carousel = () => {
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const projects = data.carrousel.projects;
   const currentProject = projects[currentIndex];
@@ -23,12 +22,22 @@ export const Carousel = () => {
   const nextIndex = currentIndex === totalProject ? 0 : currentIndex + 1;
   const nextProject = projects[nextIndex];
 
-  const handlePrev = () => {
-    setCurrentIndex(prevIndex);
+  const handlePrev = (event) => {
+    if (
+      event.type === "click" ||
+      (event.type === "keydown" && event.key === "Enter")
+    ) {
+      setCurrentIndex(prevIndex);
+    }
   };
 
-  const handleNext = () => {
-    setCurrentIndex(nextIndex);
+  const handleNext = (event) => {
+    if (
+      event.type === "click" ||
+      (event.type === "keydown" && event.key === "Enter")
+    ) {
+      setCurrentIndex(nextIndex);
+    }
   };
 
   return (
@@ -60,11 +69,13 @@ export const Carousel = () => {
                 <p className="font-bold flex-1 text-lg text-center">
                   {currentProject.name}
                 </p>
-                <p className="text-base w-3/5">
-                  {currentProject.description}
-                </p>
+                <p className="text-base w-3/5">{currentProject.description}</p>
                 <Link href={currentProject.githubLink} target="_blank">
-                  <Image className="w-7 h-7 cursor-pointer flex-1" src={github} alt="logo github"/>
+                  <Image
+                    className="w-7 h-7 cursor-pointer flex-1"
+                    src={github}
+                    alt="logo github"
+                  />
                 </Link>
               </div>
             </div>
