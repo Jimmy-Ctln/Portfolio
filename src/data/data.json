@@ -4,44 +4,44 @@
       {
         "id": 1,
         "name": "HTML",
-        "src": "/assets/languages/html.png"
+        "src": "/assets/languages/html.webp"
       },
       {
         "id": 2,
         "name": "CSS",
-        "src": "/assets/languages/css.png"
+        "src": "/assets/languages/css.webp"
       },
       {
         "id": 3,
         "name": "SASS",
-        "src": "/assets/languages/sass.png"
+        "src": "/assets/languages/sass.webp"
       },
       {
         "id": 4,
         "name": "TAILWIND",
-        "src": "/assets/languages/tailwind.png"
+        "src": "/assets/languages/tailwind.webp"
       }
     ],
     "frontend": [
       {
         "id": 1,
         "name": "NEXTJS",
-        "src": "/assets/languages/nextjs.png"
+        "src": "/assets/languages/nextjs.webp"
       },
       {
         "id": 2,
         "name": "REACT",
-        "src": "/assets/languages/react.png"
+        "src": "/assets/languages/react.webp"
       },
       {
         "id": 3,
         "name": "REDUX",
-        "src": "/assets/languages/redux.png"
+        "src": "/assets/languages/redux.webp"
       },
       {
         "id": 4,
         "name": "JAVASCRIPT",
-        "src": "/assets/languages/javascript.png"
+        "src": "/assets/languages/javascript.webp"
       }
     ]
   },
@@ -50,21 +50,21 @@
       {
         "id": 1,
         "name": "KASA",
-        "src": "/assets/images/kasa.png",
+        "src": "/assets/images/kasa.webp",
         "githubLink": "https://github.com/Jimmy-Ctln/Location-Immobiliere",
         "description": "Création d'une application web de location immobilière avec React & Sass"
       },
       {
         "id": 2,
         "name": "Ohmyfood",
-        "src": "/assets/images/ohmyfood.png",
+        "src": "/assets/images/ohmyfood.webp",
         "githubLink": "https://github.com/Jimmy-Ctln/Projet-4-ohmyfood.github.io",
         "description": "Création d'un site mobile avec des animations CSS"
       },
       {
         "id": 3,
         "name": "Argent-Bank",
-        "src": "/assets/images/argent-bank.png",
+        "src": "/assets/images/argent-bank.webp",
         "githubLink": "https://github.com/Jimmy-Ctln/ArgentBank-website",
         "description": "Création d'un site bancaire avec React & Redux"
       }

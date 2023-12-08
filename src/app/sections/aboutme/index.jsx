@@ -2,22 +2,18 @@
 
 import React from "react";
 import Image from "next/image";
-import profilePicture from "public/assets/profile_photos/profile_photo_800w.jpg";
-import frame8 from "public/assets/diamond_frames/frame8.png";
-import frame7 from "public/assets/diamond_frames/frame7.png";
+import profilePicture from "public/assets/profile_photos/profile_photo.webp";
+import frame8 from "public/assets/diamond_frames/frame8.webp";
+import frame7 from "public/assets/diamond_frames/frame7.webp";
 import { SocialNetworks } from "@/components/social-networks";
-import { Link } from "react-scroll";
+import { handleScroll } from "@/utils/scroll-section";
 import { motion } from "framer-motion";
 
 export const AboutMe = () => {
-  const handleSetActive = (to) => {
-    console.log(to);
-  };
-
   return (
     <section
       id="about-me"
-      className="w-full h-full pb-52 pt-32 relative bg-secondary max-lg:pt-14 max-xl:px-20 max-md:pb-28 max-md:px-5"
+      className="w-full h-full pb-52 pt-32 relative bg-secondary max-xl:px-20 max-lg:pt-28 max-md:pb-28 max-md:px-5"
     >
       <div className="text-center">
         <h3 className="text-4xl font-bold max-lg:text-3xl">QUI SUIS-JE ?</h3>
@@ -46,24 +42,21 @@ export const AboutMe = () => {
             Occitanie, plus précisément sur{" "}
             <span className="font-bold">Toulouse</span> !
           </p>
-          <div className="flex items-end gap-8">
+          <div className="flex items-end gap-5">
             <div className="flex flex-col gap-3 text-lg max-2xl:text-base max-md:text-sm">
               <p>Envie d&lsquo;en savoir plus ?</p>
-              <button className="bg-gradient-to-l from-third to-secondary rounded-md px-1 py-1 cursor-pointer">
-                <Link
-                  to="contact"
-                  onSetActive={handleSetActive}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  className="cursor-pointer"
-                >
-                  Contacte moi !
-                </Link>
-              </button>
+              <motion.button
+                className="font-bold text-base rounded-[10px] p-3 bg-gradient-to-r from-fourth to-blue-500 cursor-pointer max-md:text-sm max-md:p-2"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.8 }}
+                role="button"
+                onClick={(event) => handleScroll("contact", null, event)}
+                onKeyDown={(event) => handleScroll("contact", null, event)}
+              >
+                CONTACTEZ-MOI
+              </motion.button>
             </div>
-            <div className="flex items-end w-20 h-20 max-2xl:w-16 max-2xl:h-16">
+            <div className="flex items-end w-20 h-20 max-2xl:w-16 max-2xl:h-16 max-md:w-14 max-md:h-14">
               <SocialNetworks />
             </div>
           </div>
@@ -124,7 +117,7 @@ export const AboutMe = () => {
           ease: "easeInOut",
         }}
       >
-        <Image width={200} height={200} src={frame7} alt="diamond icon" />
+        <Image width={"auto"} height={"auto"} src={frame7} alt="diamond icon" />
       </motion.div>
     </section>
   );
