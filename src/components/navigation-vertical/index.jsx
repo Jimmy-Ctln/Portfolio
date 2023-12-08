@@ -1,132 +1,102 @@
-import React from "react";
-import { Link } from 'react-scroll'
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { handleScroll } from "@/utils/scroll-section";
 
 export const NavigationVertical = ({ handleClick }) => {
+  const containerRef = useRef(null);
 
-  const handleSetActive = (to) => {
-    console.log(to);
-  };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
+        handleClick();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [handleClick]);
 
   return (
     <div className="fixed top-0 left-0 right-0 w-full h-full">
-      <nav className="flex justify-center bg-[#0f1113] bg-opacity-90 w-full h-full">
-        <ul className="flex flex-col justify-center text-2xl items-center gap-10">
-        <motion.li
-          whileHover={{
-            scale: 1.2,
-          }}
+      <nav className="flex justify-center bg-[#0f1113] bg-opacity-90 w-full h-screen">
+        <ul
+          className="flex flex-col justify-center text-2xl items-center gap-10"
+          ref={containerRef}
         >
-          <Link
-            to="home"
-            onSetActive={handleSetActive}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            className="cursor-pointer"
-            onClick={handleClick}
+          <motion.li
+            whileHover={{
+              scale: 1.2,
+            }}
+            onClick={(event) => {
+              handleClick();
+              handleScroll("home", -500, event);
+            }}
           >
             Home
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Link
-            to="about-me"
-            onSetActive={handleSetActive}
-            smooth={true}
-            offset={40}
-            duration={500}
-            spy={true}
-            exact="true"
-            className="cursor-pointer"
-            onClick={handleClick}
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.2,
+            }}
+            onClick={(event) => {
+              handleClick();
+              handleScroll("about-me", -40, event);
+            }}
           >
             Qui suis-je ?
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Link
-            to="skills"
-            onSetActive={handleSetActive}
-            smooth={true}
-            duration={500}
-            spy={true}
-            offset={40}
-            exact="true"
-            className="cursor-pointer"
-            onClick={handleClick}
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.2,
+            }}
+            onClick={(event) => {
+              handleClick();
+              handleScroll("skills", -40, event);
+            }}
           >
             Compétences
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Link
-            to="experiences"
-            onSetActive={handleSetActive}
-            smooth={true}
-            duration={500}
-            offset={40}
-            spy={true}
-            exact="true"
-            className="cursor-pointer"
-            onClick={handleClick}
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.2,
+            }}
+            onClick={(event) => {
+              handleClick();
+              handleScroll("experiences", -40, event);
+            }}
           >
             Expériences
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Link
-            to="my-work"
-            onSetActive={handleSetActive}
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            className="cursor-pointer"
-            onClick={handleClick}
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.2,
+            }}
+            onClick={(event) => {
+              handleClick();
+              handleScroll("my-work", -40, event);
+            }}
           >
-            Réalisations
-          </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Link
-            to="contact"
-            onSetActive={handleSetActive}
-            smooth={true}
-            duration={500}
-            offset={40}
-            spy={true}
-            className="cursor-pointer"
-            onClick={handleClick}
+            Mes réalisations
+          </motion.li>
+          <motion.li
+            whileHover={{
+              scale: 1.2,
+            }}
+            onClick={(event) => {
+              handleClick();
+              handleScroll("contact", -50, event);
+            }}
           >
             Contact
-          </Link>
-        </motion.li>
+          </motion.li>
         </ul>
       </nav>
     </div>
   );
 };
-
-

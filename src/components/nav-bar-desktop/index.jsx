@@ -1,118 +1,85 @@
-'use client'
+"use client";
 
 import React from "react";
-import { Link } from 'react-scroll'
 import { motion } from "framer-motion";
+import Image from "next/image";
+import house from "public/assets/icons/house.svg";
+import { handleScroll } from "@/utils/scroll-section";
 
 export const NavBarDesktop = () => {
-
-  const handleSetActive = (to) => {
-    console.log(to);
-  };
-
   return (
-    <ul className="flex justify-end gap-10 max-lg:items-center">
+    <ul className="fixed flex justify-end gap-10 max-lg:items-center">
       <motion.li
         whileHover={{
           scale: 1.2,
         }}
+        className="cursor-pointer"
+        role="button"
+        tabIndex={0}
+        onClick={(event) => handleScroll("home", -500, event)}
+        onKeyDown={(event) => handleScroll("home", -500, event)}
       >
-        <Link
-          to="home"
-          onSetActive={handleSetActive}
-          offset={-500}
-          smooth={true}
-          duration={500}
-          spy={true}
-          exact="true"
-          className="cursor-pointer"
-        >
-          Home
-        </Link>
+        <Image src={house} className="w-[18px] h-[18px]" alt="house icon" />
       </motion.li>
       <motion.li
         whileHover={{
           scale: 1.2,
         }}
+        role="button"
+        className="cursor-pointer"
+        tabIndex={0}
+        onClick={(event) => handleScroll("about-me", null, event)}
+        onKeyDown={(event) => handleScroll("about-me", null, event)}
       >
-        <Link
-          to="about-me"
-          onSetActive={handleSetActive}
-          smooth={true}
-          duration={500}
-          spy={true}
-          exact="true"
-          className="cursor-pointer"
-        >
-          Qui suis-je ?
-        </Link>
+        Qui suis-je ?
       </motion.li>
       <motion.li
         whileHover={{
           scale: 1.2,
         }}
+        role="button"
+        className="cursor-pointer"
+        tabIndex={0}
+        onClick={(event) => handleScroll("skills", null, event)}
+        onKeyDown={(event) => handleScroll("skills", null, event)}
       >
-        <Link
-          to="skills"
-          onSetActive={handleSetActive}
-          smooth={true}
-          duration={500}
-          spy={true}
-          exact="true"
-          className="cursor-pointer"
-        >
-          Compétences
-        </Link>
+        Compétences
       </motion.li>
       <motion.li
         whileHover={{
           scale: 1.2,
         }}
+        role="button"
+        className="cursor-pointer"
+        tabIndex={0}
+        onClick={(event) => handleScroll("experiences", null, event)}
+        onKeyDown={(event) => handleScroll("experiences", null, event)}
       >
-        <Link
-          to="experiences"
-          onSetActive={handleSetActive}
-          smooth={true}
-          duration={500}
-          spy={true}
-          exact="true"
-          className="cursor-pointer"
-        >
-          Expériences
-        </Link>
+        Expériences
       </motion.li>
       <motion.li
         whileHover={{
           scale: 1.2,
         }}
+        role="button"
+        className="cursor-pointer"
+        tabIndex={0}
+        onClick={(event) => handleScroll("my-work", null, event)}
+        onKeyDown={(event) => handleScroll("my-work", null, event)}
       >
-        <Link
-          to="my-work"
-          onSetActive={handleSetActive}
-          smooth={true}
-          duration={500}
-          spy={true}
-          exact="true"
-          className="cursor-pointer"
-        >
-          Réalisations
-        </Link>
+        Mes réalisations
       </motion.li>
       <motion.li
         whileHover={{
           scale: 1.2,
         }}
+        role="button"
+        className="cursor-pointer"
+        tabIndex={0}
+        onClick={(event) => handleScroll("contact", null, event)}
+        onKeyDown={(event) => handleScroll("contact", null, event)}
       >
-        <Link
-          to="contact"
-          onSetActive={handleSetActive}
-          smooth={true}
-          duration={500}
-          spy={true}
-          className="cursor-pointer"
-        >
-          Contact
-        </Link>
+        Contact
       </motion.li>
     </ul>
   );
