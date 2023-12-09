@@ -36,9 +36,9 @@ export const AboutMe = () => {
             contenu digital.
           </p>
           <p className="text-lg max-2xl:text-base max-md:text-sm">
-            À l&lsquo;issue de ma formation OpenClassrooms, je suis à la
+            Suite à ma reconversion avec OpenClassrooms, je suis à la
             recherche d&lsquo;un emploi en tant que{" "}
-            <span className="font-bold">développeur Front-end</span> en région
+            <span className="font-bold">développeur front-end</span> en région
             Occitanie, plus précisément sur{" "}
             <span className="font-bold">Toulouse</span> !
           </p>
