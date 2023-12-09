@@ -19,13 +19,12 @@ export const NavBarMobile = () => {
       {isClicked ? (
         <NavigationVertical handleClick={handleClick} />
       ) : (
-        <div className="flex items-center h-5 justify-between">
+        <div className="flex items-center h-full justify-between">
           <div className="w-20">
             <SocialNetworks />
           </div>
           <motion.div
             whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 0.08 }}
             onClick={handleClick}
           >
             <Image

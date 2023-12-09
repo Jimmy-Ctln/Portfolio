@@ -23,8 +23,8 @@ export const NavigationVertical = ({ handleClick }) => {
   }, [handleClick]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 w-full h-full">
-      <nav className="flex justify-center bg-[#0f1113] bg-opacity-90 w-full h-screen">
+    <div className="fixed top-0 left-0 w-full h-full">
+      <nav className="flex justify-center bg-[#0f1113] bg-opacity-90 w-full h-full">
         <ul
           className="flex flex-col justify-center text-2xl items-center gap-10"
           ref={containerRef}
