@@ -6,7 +6,7 @@ export const ProjectList = () => {
   const projects = data.carrousel.projects;
 
   return (
-    <div className="flex flex-col h-full gap-20 mt-10">
+    <div className="flex flex-col h-full gap-20 mt-10 max-sm:gap-10">
       {projects.map((project) => (
         <div key={project.id}>
           <Project

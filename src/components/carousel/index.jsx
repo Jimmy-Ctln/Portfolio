@@ -40,6 +40,14 @@ export const Carousel = () => {
     }
   };
 
+  const openGithubLink = (link, event) => {
+    if (event.type === "click" ||
+    (event.type === "keydown" && event.key === "Enter") 
+    ){
+      window.open(link, "_blank");
+    }
+  };
+
   return (
     <div className="flex justify-center mt-10 p-5">
       <div className="flex relative items-center gap-3 justify-center px-1">
@@ -70,13 +78,15 @@ export const Carousel = () => {
                   {currentProject.name}
                 </p>
                 <p className="text-base w-3/5">{currentProject.description}</p>
-                <Link href={currentProject.githubLink} target="_blank">
                   <Image
                     className="w-7 h-7 cursor-pointer flex-1"
                     src={github}
                     alt="logo github"
+                    tabIndex={0}
+                    role="link"
+                    onClick={(event) => openGithubLink(currentProject.githubLink, event)}
+                    onKeyDown={(event) => openGithubLink(currentProject.githubLink, event)}
                   />
-                </Link>
               </div>
             </div>
           </div>
@@ -91,8 +101,11 @@ export const Carousel = () => {
               objectFit: "cover",
               objectPosition: "top",
             }}
-            className="rounded-3xl"
+            className="rounded-3xl cursor-pointer"
             alt={`project ${currentProject.name}`}
+            tabIndex={0}
+            onClick={(event) => openGithubLink(currentProject.githubLink, event)}
+            onKeyDown={(event) => openGithubLink(currentProject.githubLink, event)}
           />
         </div>
         <div className="w-[280px] h-[420px] blur-sm ml-[-60px] shadow-xl brightness-50 max-xl:w-[180px] max-lg:w-[150px] max-[965px]:hidden">

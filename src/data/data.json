@@ -49,17 +49,17 @@
     "projects": [
       {
         "id": 1,
-        "name": "KASA",
-        "src": "/assets/images/kasa.webp",
-        "githubLink": "https://github.com/Jimmy-Ctln/Location-Immobiliere",
-        "description": "Création d'une application web de location immobilière avec React & Sass"
-      },
-      {
-        "id": 2,
         "name": "Ohmyfood",
         "src": "/assets/images/ohmyfood.webp",
         "githubLink": "https://github.com/Jimmy-Ctln/Projet-4-ohmyfood.github.io",
         "description": "Création d'un site mobile avec des animations CSS"
+      },
+      {
+        "id": 2,
+        "name": "KASA",
+        "src": "/assets/images/kasa.webp",
+        "githubLink": "https://github.com/Jimmy-Ctln/Location-Immobiliere",
+        "description": "Création d'une application web de location immobilière avec React & Sass"
       },
       {
         "id": 3,
