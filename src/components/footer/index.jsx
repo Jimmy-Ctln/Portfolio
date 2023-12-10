@@ -7,7 +7,7 @@ export const Footer = () => {
       <span className="text-lg max-md:text-sm max-sm:text-xs">
         Jimmy Catalano © 2023
       </span>
-      <div className="w-12 max-sm:w-10">
+      <div className="flex items-center w-12 h-12 max-sm:w-10 max-sm:h-10">
         <SocialNetworks />
       </div>
     </div>

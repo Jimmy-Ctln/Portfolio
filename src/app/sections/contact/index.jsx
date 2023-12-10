@@ -83,7 +83,7 @@ export const Contact = () => {
       <div className="flex justify-center max-lg:mt-0">
         <h3 className="text-4xl h-auto font-bold max-lg:text-3xl">CONTACT</h3>
       </div>
-      <div className="flex flex-col max-w-[900px] mx-auto mt-14 max-lg:w-full">
+      <div className="flex flex-col max-w-[900px] mx-auto mt-14 max-lg:w-full max-sm:mt-8">
         <form
           ref={form}
           onSubmit={sendEmail}

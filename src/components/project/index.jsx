@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import Image from "next/image";
 import github from "public/assets/social_network_icons/github.svg";
 import { motion } from "framer-motion";
@@ -19,6 +19,7 @@ export const Project = ({ name, image, alt, description, href }) => {
           height={700}
           src={image}
           alt={alt}
+          priority={true}
           onClick={() => window.open(href, "_blank")}
         />
 

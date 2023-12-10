@@ -18,7 +18,7 @@ export const Skills = () => {
           COMPÉTENCES
         </h5>
         <motion.div
-          className="z-[-50] max-sm:w-20"
+          className="z-[-50] w-[230px] max-xl:w-[170px] max-lg:w-[150px] max-md:w-[120px] max-sm:w-24"
           animate={{ y: 20 }}
           transition={{
             repeat: Infinity,
@@ -33,7 +33,7 @@ export const Skills = () => {
             src={frame9}
             style={{
               width: "100%",
-              height: "auto",
+              height: "100%",
             }}
             alt="diamond icon"
           />

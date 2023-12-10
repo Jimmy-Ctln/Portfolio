@@ -71,7 +71,7 @@ export const Carousel = () => {
           />
         </div>
         <div className="w-[700px] h-[600px] z-10 relative shadow-xl max-2xl:w-[600px] max-2xl:h-[500px]">
-          <div className="before-element absolute rounded-bl-[20px] rounded-br-[20px] bottom-0 w-full h-36 bg-gradient-to-t from-third to-secondary">
+          <div className="before-element absolute rounded-bl-[20px] rounded-br-[20px] bottom-0 w-full h-32 bg-gradient-to-t from-third to-secondary">
             <div className="absolute left-0 bottom-0 flex w-full h-full">
               <div className="flex gap-10 p-10 w-full items-center">
                 <p className="font-bold flex-1 text-lg text-center">

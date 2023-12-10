@@ -14,7 +14,6 @@ export const NavBarDesktop = () => {
           scale: 1.2,
         }}
         className="cursor-pointer"
-        role="button"
         tabIndex={0}
         onClick={(event) => handleScroll("home", -500, event)}
         onKeyDown={(event) => handleScroll("home", -500, event)}
@@ -25,7 +24,6 @@ export const NavBarDesktop = () => {
         whileHover={{
           scale: 1.2,
         }}
-        role="button"
         className="cursor-pointer"
         tabIndex={0}
         onClick={(event) => handleScroll("about-me", null, event)}
@@ -37,7 +35,6 @@ export const NavBarDesktop = () => {
         whileHover={{
           scale: 1.2,
         }}
-        role="button"
         className="cursor-pointer"
         tabIndex={0}
         onClick={(event) => handleScroll("skills", null, event)}
@@ -49,7 +46,6 @@ export const NavBarDesktop = () => {
         whileHover={{
           scale: 1.2,
         }}
-        role="button"
         className="cursor-pointer"
         tabIndex={0}
         onClick={(event) => handleScroll("experiences", null, event)}
@@ -61,7 +57,6 @@ export const NavBarDesktop = () => {
         whileHover={{
           scale: 1.2,
         }}
-        role="button"
         className="cursor-pointer"
         tabIndex={0}
         onClick={(event) => handleScroll("my-work", null, event)}
@@ -73,7 +68,6 @@ export const NavBarDesktop = () => {
         whileHover={{
           scale: 1.2,
         }}
-        role="button"
         className="cursor-pointer"
         tabIndex={0}
         onClick={(event) => handleScroll("contact", null, event)}

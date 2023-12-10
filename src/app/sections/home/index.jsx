@@ -56,6 +56,8 @@ export const Home = () => {
           <Image
             className="w-461 h-461 shadow-2xl rounded-full object-cover z-10 max-lg:w-80 max-lg:h-80 max-sm:w-72 max-sm:h-72"
             src={main_picture}
+            width={500}
+            height={500}
             alt="Profile photo of Jimmy Catalano"
           />
         </motion.div>

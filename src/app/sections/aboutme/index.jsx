@@ -76,8 +76,8 @@ export const AboutMe = () => {
             <Image
               className="rounded-3xl shadow-xl"
               src={profilePicture}
-              width={1000}
-              height={1000}
+              width={700}
+              height={700}
               style={{
                 width: "100%",
                 height: "100%",

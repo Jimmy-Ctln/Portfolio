@@ -11,7 +11,7 @@ export const MyWork = () => {
   return (
     <section id="my-work" className="h-full pb-40 pt-32 relative max-lg:pt-28">
       <div className="flex justify-center">
-        <h3 className="text-4xl h-auto font-bold mb-10 max-lg:mb-1 max-lg:text-3xl">
+        <h3 className="text-4xl h-auto font-bold mb-5 max-lg:mb-1 max-lg:text-3xl">
           MES RÉALISATIONS
         </h3>
       </div>
