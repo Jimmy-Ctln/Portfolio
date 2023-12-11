@@ -61,7 +61,7 @@ export const Contact = () => {
           (error) => {
             console.log(error.text);
             displayMessage(
-              "Une erreur est survenue lors de lenvoie du formulaire !"
+              "Une erreur est survenue lors de l'envoi du formulaire !"
             );
             setIsSuccess(false);
           }
