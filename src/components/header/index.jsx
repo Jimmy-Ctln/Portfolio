@@ -3,7 +3,7 @@
 import React from "react";
 import { NavBarMobile } from "../nav-bar-mobile";
 import { NavBarDesktop } from "../nav-bar-desktop";
-import useWindowSize from "../hooks/useWindowSize";
+import useWindowSize from "../../hooks/useWindowSize";
 
 export default function Header() {
   const isSmallScreen = useWindowSize(900);

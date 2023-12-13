@@ -3,7 +3,7 @@
 import React from "react";
 import { Carousel } from "@/components/carousel";
 import { ProjectList } from "@/components/project-list";
-import useWindowSize from "@/components/hooks/useWindowSize";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export const MyWork = () => {
   const isSmallScreen = useWindowSize(780);

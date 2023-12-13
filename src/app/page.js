@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import { Home } from "./sections/home";
-import { AboutMe } from "./sections/aboutme";
+import { AboutMe } from "./sections/about-me";
 import { Skills } from "./sections/skills";
 import { Experiences } from "./sections/experiences";
 import { MyWork } from "./sections/my-work";
