@@ -43,6 +43,25 @@
         "name": "JAVASCRIPT",
         "src": "/assets/languages/javascript.webp"
       }
+    ],
+    "backend": [
+      {
+        "id": 1,
+        "name": "NODE.JS",
+        "src": "/assets/languages/node.webp"
+      },
+      {
+        "id": 2,
+        "name": "EXPRESS.JS",
+        "src": "/assets/languages/express.webp"
+      }
+    ], 
+    "database": [
+      {
+        "id": 1,
+        "name": "MONGODB",
+        "src": "/assets/languages/mongodb.webp"
+      }
     ]
   },
   "carrousel": {

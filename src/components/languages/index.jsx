@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Languages = ({ src, name }) => {
   return (
-    <div className="flex flex-col items-center justify-center w-full rounded-xl">
+    <div className="flex flex-col gap-1 items-center justify-center w-full rounded-xl">
       <Image
         src={src}
         width={100}
