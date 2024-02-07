@@ -26,7 +26,7 @@ export const Home = () => {
             role="button"
             onClick={() => {
               window.open(
-                "/assets/download/cv-jimmy-catalano-2023.pdf",
+                "/assets/download/cv-jimmy-catalano.pdf",
                 "_blank"
               );
             }}
