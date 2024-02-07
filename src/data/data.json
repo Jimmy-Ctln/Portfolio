@@ -4,44 +4,63 @@
       {
         "id": 1,
         "name": "HTML",
-        "src": "/assets/languages/html.webp"
+        "src": "/assets/languages/html.svg"
       },
       {
         "id": 2,
         "name": "CSS",
-        "src": "/assets/languages/css.webp"
+        "src": "/assets/languages/css.svg"
       },
       {
         "id": 3,
         "name": "SASS",
-        "src": "/assets/languages/sass.webp"
+        "src": "/assets/languages/sass.svg"
       },
       {
         "id": 4,
         "name": "TAILWIND",
-        "src": "/assets/languages/tailwind.webp"
+        "src": "/assets/languages/tailwind.svg"
       }
     ],
     "frontend": [
       {
         "id": 1,
         "name": "NEXTJS",
-        "src": "/assets/languages/nextjs.webp"
+        "src": "/assets/languages/next-js.svg"
       },
       {
         "id": 2,
         "name": "REACT",
-        "src": "/assets/languages/react.webp"
+        "src": "/assets/languages/react.svg"
       },
       {
         "id": 3,
         "name": "REDUX",
-        "src": "/assets/languages/redux.webp"
+        "src": "/assets/languages/redux.svg"
       },
       {
         "id": 4,
         "name": "JAVASCRIPT",
-        "src": "/assets/languages/javascript.webp"
+        "src": "/assets/languages/javascript.svg"
+      }
+    ],
+    "backend": [
+      {
+        "id": 1,
+        "name": "NODE.JS",
+        "src": "/assets/languages/nodejs.svg"
+      },
+      {
+        "id": 2,
+        "name": "EXPRESS.JS",
+        "src": "/assets/languages/express.svg"
+      }
+    ], 
+    "database": [
+      {
+        "id": 1,
+        "name": "MONGODB",
+        "src": "/assets/languages/mongodb.svg"
       }
     ]
   },

@@ -8,7 +8,7 @@ export const Languages = ({ src, name }) => {
         src={src}
         width={100}
         height={100}
-        className="w-[50px] h-auto"
+        className="w-[50px] min-h-[80px]"
         alt={name}
       />
       <div>
