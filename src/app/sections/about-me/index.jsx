@@ -38,9 +38,8 @@ export const AboutMe = () => {
           <p className="text-lg max-2xl:text-base max-md:text-sm">
             Suite à ma reconversion avec OpenClassrooms, je suis à la
             recherche d&lsquo;un emploi en tant que{" "}
-            <span className="font-bold">développeur front-end</span> en région
-            Occitanie, plus précisément sur{" "}
-            <span className="font-bold">Toulouse</span> !
+            <span className="font-bold">développeur front-end</span> dans toute la {' '}
+            <span className="font-bold">France</span> !
           </p>
           <div className="flex items-end gap-5">
             <div className="flex flex-col gap-3 text-lg max-2xl:text-base max-md:text-sm">
